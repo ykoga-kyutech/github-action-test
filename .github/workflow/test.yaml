@@ -1,0 +1,19 @@
+name: github-actions-test
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+    tags:
+      - '^r[0-9]+'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo
+        run: |
+          echo -e "Hello world!!"
