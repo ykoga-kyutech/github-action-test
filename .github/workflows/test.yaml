@@ -1,4 +1,4 @@
-name: github-actions-test
+name: CI
 
 on:
   pull_request:
@@ -8,12 +8,14 @@ on:
     branches:
       - main
     tags:
-      - '^r[0-9]+'
+      - 'r[0-9]+'
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: echo
-        run: |
-          echo -e "Hello world!!"
+      - uses: actions/checkout@v2
+
+      - name: Run a one-line script
+        run: echo Hello, world!
