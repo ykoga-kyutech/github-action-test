@@ -24,6 +24,6 @@ jobs:
         run: |
           for ros_distro in kinetic noetic; do
             for v in a b; do
-              echo "${ros_distro } ${v}"
+              echo "${ros_distro} ${v}"
             done
           done
