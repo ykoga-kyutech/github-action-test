@@ -19,3 +19,11 @@ jobs:
 
       - name: Run a one-line script
         run: echo Hello, world!
+
+      - name: loop
+        run: |
+          for ros_distro in kinetic noetic; do
+            for v in a b; do
+              echo "${ros_distro } ${v}"
+            done
+          done
